@@ -16,20 +16,7 @@ int main() {
 
         for (int i = 0; i < s.size(); i++)
         {
-            if(s[i] == c){
-                if(i == 0 && (s.size() - (i + 1)) % 2 == 0) {
-                    check = true;
-                    break;
-                }
-                if(i == s.size() - 1 && i % 2 == 0) {
-                    check = true;
-                    break;
-                }
-                if(i % 2 == 0 && (s.size() - (i + 1)) % 2 == 0) {
-                    check = true;
-                    break;
-                }
-            } 
+            if(s[i] == c && i % 2 == 0) check = true;
         }
         if(check) cout << "YES\n";
         else cout << "NO\n";
